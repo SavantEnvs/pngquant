@@ -1,0 +1,9 @@
+project: savantenvs/pngquant
+target: pngquant-fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pngquant-fuzz/testsuite
+cmds:
+  - cmd: /mayhem/pngquant-fuzz
+    libfuzzer: true
+    timeout: 10
